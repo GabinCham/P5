@@ -12,7 +12,19 @@ class Quotes {
     constructor() {
         this.themeOne = {}
     }
-    initQuotes() {
 
+    initQuotes() {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', '/P5/data/quotes.json', true);
+        xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                console.log(this.responseText);
+// Requête finie, traitement ici.
+            }
+
+        }
     }
 }
+
+const quotes = new Quotes();
+quotes.initQuotes();
