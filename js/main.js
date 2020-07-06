@@ -1,6 +1,6 @@
 var sujet = ['Serge', 'John', 'Kurt', 'Mick'];
 var verbe = ['fait de la guitar', 'joue de la batterie', 'fait du piano', 'fait du triangle'];
-var complement = ['à la plage.','sur scène.', 'sur la tour Eiffel.', 'nul part.'];
+var complement = ['à la plage.', 'sur scène.', 'sur la tour Eiffel.', 'nul part.'];
 
 alert('VERBE N3 == ', verbe[3]);
 
@@ -21,7 +21,7 @@ class Quotes {
                 console.log(this.responseText);
 // Requête finie, traitement ici.
             }
-
+            xhr.send(null);
         }
     }
 }
