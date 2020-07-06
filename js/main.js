@@ -21,8 +21,8 @@ class Quotes {
                 console.log(this.responseText);
 // Requête finie, traitement ici.
             }
-            xhr.send(null);
         }
+        xhr.send(null);
     }
 }
 
