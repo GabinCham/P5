@@ -49,7 +49,7 @@ quotes.initQuotes();
 
 function generateFromJson() {
     sujetFromJson.innerHTML = quotes.themeOne.start;
-    console.log('fonction iniQuotes == ', this.initQuotes());
+    console.log('fonction iniQuotes == ', this.initQuotes().themeOne.start);
     // non pour : console.log('this.quotes == ', this.quotes);
     // non pour : console.log('this.themeOne == ', this.themeOne);
     // cannot read : console.log('this.response.themeOne == ', this.response.themeOne);
