@@ -1,17 +1,28 @@
 var sujet = ['Serge', 'John', 'Kurt', 'Mick'];
 var verbe = ['fait de la guitare', 'joue de la batterie', 'fait du piano', 'fait du triangle'];
 var complement = ['à la plage.', 'sur scène.', 'sur la tour Eiffel.', 'nul part.'];
-
+var aleatoire = null;
 
 const sujetId = document.getElementById('sujet');
-const sujetJson = document.getElementById('sujetJson');
 const verbeId = document.getElementById('verbe');
 const complementId = document.getElementById('complement');
 
+const sujetFromJson = document.getElementById('sujetJson');
 
-sujetId.innerHTML = sujet[3];
-verbeId.innerHTML = verbe[3];
-complementId.innerHTML = complement[3];
+//sujetId.innerHTML = sujet[3];
+//verbeId.innerHTML = verbe[3];
+//complementId.innerHTML = complement[3];
+
+
+function generate() {
+    // complementId.innerHTML = complement[2];
+    aleatoire = Math.floor(Math.random() * sujet.length);
+    sujetId.innerHTML = sujet[aleatoire];
+    aleatoire = Math.floor(Math.random() * verbe.length);
+    verbeId.innerHTML = verbe[aleatoire];
+    aleatoire = Math.floor(Math.random() * complement.length);
+    complementId.innerHTML = complement[aleatoire];
+}
 
 
 class Quotes {
@@ -36,9 +47,15 @@ class Quotes {
 const quotes = new Quotes();
 quotes.initQuotes();
 
-
-sujetJson.innerHTML = quotes.themeOne.start;
-
+function generateFromJson() {
+    sujetFromJson.innerHTML = quotes;
+    //aleatoire = Math.floor(Math.random() * sujet.length);
+    //sujetId.innerHTML = sujet[aleatoire];
+    //aleatoire = Math.floor(Math.random() * verbe.length);
+    //verbeId.innerHTML = verbe[aleatoire];
+    //aleatoire = Math.floor(Math.random() * complement.length);
+    //complementId.innerHTML = complement[aleatoire];
+}
 
 
 // quotes.themeOne.start
