@@ -51,7 +51,7 @@ function generateFromJson() {
     sujetFromJson.innerHTML = quotes.themeOne.start;
     // non pour : console.log('this.quotes == ', this.quotes);
     // non pour : console.log('this.themeOne == ', this.themeOne);
-    console.log('this.response.themeOne == ', this.response.themeOne);
+    // cannot read : console.log('this.response.themeOne == ', this.response.themeOne);
     console.log('quotes == ', quotes);
     console.log('this.quotes == ', this.quotes);
     console.log('quotes.initQuotes() == ', quotes.initQuotes());
