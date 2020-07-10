@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <title>Citations</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body id="citation-page">
 
-<h1>Citations1</h1>
-
-<a href="page2.html">PAGE 2</a>
+<h1>Générateur de Citations</h1>
 
 <div class="container">
-  <div class="row">
+    <div class="row">
         <div class="col">
             <p id="sujet"></p>
         </div>
@@ -23,39 +22,53 @@
         <div class="col">
             <p id="compl"></p>
         </div>
-</div>
-    <button class="btn btn-success" id="generate" onClick="generate()">Générer</button>
-<!--
-    <div class="choice">
-    <input id="choice-number" type="number">
-    <label for="choice-number">Choisir un nombre</label>
-    <button class="btn btn-danger" id="getNumberOf" type="submit" onClick="getNumberOf()">Envoyer</button>
     </div>
--->
+    <button class="btn btn-success" id="generateThemeOne" onClick="generateThemeOne()">Générer theme one</button>
 
-    <form>
-        <p>Entrez un nombre entre 1 et 5</p>
-        <input type="number" name="choice-number" id="choice-number" /><br /><br />
-        <input type="submit" onClick="getNumber()"/>
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p id="sujetTwo"></p>
+            </div>
+            <div class="col">
+                <p id="verbeTwo"></p>
+            </div>
+            <div class="col">
+                <p id="complTwo"></p>
+            </div>
+        </div>
+        <button class="btn btn-success" id="generateThemeTwo" onClick="generateThemeTwo()">Générer theme two</button>
 
-    <div id="responseNumber"></div>
+        <form>
+            <p>Entrez un nombre entre 1 et 5</p>
+            <label for="choice-number">Choix :</label><input type="number" name="choice-number"
+                                                             id="choice-number"/><br/><br/>
+            <input type="submit" onClick="getNumber()" value="Choisir nombre citations"/>
+        </form>
 
-    <div class="row">
-        <div class="col">
-            <p id="sujetJson"></p>
+        <form>
+            <p>Choisir un theme (Theme 1 ou 2)</p>
+            <label for="pull-get-theme">Alors ?</label><input type="number" name="pull-get-theme" id="pull-get-theme">
+            <input type="submit" onClick="getTheme()" value="Choisir theme">
+        </form>
+
+        <div id="responseNumber"></div>
+
+        <div class="row">
+            <div class="col">
+                <p id="sujetJson"></p>
+            </div>
+            <div class="col">
+                <p id="verbeJson"></p>
+            </div>
+            <div class="col">
+                <p id="complementJson"></p>
+            </div>
         </div>
-        <div class="col">
-            <p id="verbeJson"></p>
-        </div>
-        <div class="col">
-            <p id="complementJson"></p>
-        </div>
+        <button class="btn btn-primary" id="generateFromJson" onClick="generateFromJson()">Générer</button>
+
+
     </div>
-    <button class="btn btn-primary" id="generateFromJson" onClick="generateFromJson()">Générer</button>
-
-
-</div>
 </body>
 <script src="js/main.js"></script>
 </html>

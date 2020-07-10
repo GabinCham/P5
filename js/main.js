@@ -1,36 +1,56 @@
+// Array ThemeOne à reporter dans le Json
 var sujet = ['Serge', 'John', 'Kurt', 'Mick'];
 var verbe = ['fait de la guitare', 'joue de la batterie', 'fait du piano', 'fait du triangle'];
 var compl = ['à la plage.', 'sur scène.', 'sur la tour Eiffel.', 'nul part.'];
+
+// Array ThemeTwo à reporter dans le Json
+var sujetThemeTwo = ['BLFEF', 'FEFEF', 'EFE', 'DGT'];
+var verbeThemeTwo = ['1111', '22222', '33333', '44444'];
+var complThemeTwo = ['1111', '22222', '33333', '444444'];
+
 var aleatoire = null;
 
+// Remplissage dans HTML pour ThemeOne
 const sujetId = document.getElementById('sujet');
 const verbeId = document.getElementById('verbe');
 const complId = document.getElementById('compl');
-const pullNumber = document.getElementById('choice-number');
-var responseNumberVar = document.getElementById('responseNumber');
 
+// Remplissage dans HTML pour ThemeTwo
+const sujetIdTwo = document.getElementById('sujetTwo');
+const verbeIdTwo = document.getElementById('verbeTwo');
+const complIdTwo = document.getElementById('complTwo');
 
-
+// Remplissage dans HTML pour test avec JSON
 const sujetFromJson = document.getElementById('sujetJson');
-console.log('chocie number', document.getElementById('choice-number').valueOf());
-//sujetId.innerHTML = sujet[3];
-//verbeId.innerHTML = verbe[3];
-//complId.innerHTML = compl[3];
 
+// Récupération du choix du theme + Execution
+function getTheme() {
+    var pullGetTheme = document.getElementById("pull-get-theme").value;
+    if (pullGetTheme === '1') {
+        return generateThemeOne()
+    } else if (pullGetTheme === '2') {
+        return generateThemeTwo();
+    } else {
+        alert('Choisi un chiffre entre 1 et 2 stp');
+    }
+}
+
+// Récupération du choix du nombre de citations + Execution
+// (Problème: Page recharge au submit / À faire: afficher le nombre de citations demandés)
 function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
     alert(getNumber);
     if (getNumber === '2') {
         alert('Vous avez choisi judiceusement');
-        return this.generate();
-    }
-    else {
-        alert('Wrong number');
+        return this.generateThemeOne();
+    } else {
+        return alert('Wrong number');
     }
 }
 
-function generate() {
-    // complId.innerHTML = compl[2];
+// Genere une phrase du ThemeOne au click
+// (À faire: Regrouper en une fonction avec conditions après JSON)
+function generateThemeOne() {
     aleatoire = Math.floor(Math.random() * sujet.length);
     sujetId.innerHTML = sujet[aleatoire];
     aleatoire = Math.floor(Math.random() * verbe.length);
@@ -38,8 +58,18 @@ function generate() {
     aleatoire = Math.floor(Math.random() * compl.length);
     complId.innerHTML = compl[aleatoire];
 }
+// Genere une phrase du ThemeTwo au click
+// (À faire: Regrouper en une fonction avec conditions après JSON)
+function generateThemeTwo() {
+    aleatoire = Math.floor(Math.random() * sujetThemeTwo.length);
+    sujetIdTwo.innerHTML = sujetThemeTwo[aleatoire];
+    aleatoire = Math.floor(Math.random() * verbeThemeTwo.length);
+    verbeIdTwo.innerHTML = verbeThemeTwo[aleatoire];
+    aleatoire = Math.floor(Math.random() * complThemeTwo.length);
+    complIdTwo.innerHTML = complThemeTwo[aleatoire];
+}
 
-
+// Récupération du fichier JSON
 class Quotes {
     constructor() {
         this.themeOne = {}
@@ -62,6 +92,9 @@ class Quotes {
 const quotes = new Quotes();
 quotes.initQuotes();
 
+// Generation d'une Theme au click
+// (À faire: TOUT)
+// Remplacera la fonction generateThemeOne & Two
 function generateFromJson() {
     sujetFromJson.innerHTML = quotes.themeOne.start;
     console.log('fonction iniQuotes == ', this.initQuotes().themeOne.start);
@@ -69,8 +102,8 @@ function generateFromJson() {
     // non pour : console.log('this.themeOne == ', this.themeOne);
     // cannot read : console.log('this.response.themeOne == ', this.response.themeOne);
     console.log('quotes == ', quotes); //trouve l'object mais celui tu ts surement
-   // non : console.log('this.quotes == ', this.quotes);
-   // non  : console.log('quotes.initQuotes() == ', quotes.initQuotes());
+    // non : console.log('this.quotes == ', this.quotes);
+    // non  : console.log('quotes.initQuotes() == ', quotes.initQuotes());
     console.log('this.quotes.initQuotes() == ', this.quotes.initQuotes());
 
     //aleatoire = Math.floor(Math.random() * sujet.length);
@@ -81,6 +114,9 @@ function generateFromJson() {
     //complId.innerHTML = compl[aleatoire];
 }
 
+
+
+// NOTES ://
 
 // quotes.themeOne.start
 // voir onready & xml
