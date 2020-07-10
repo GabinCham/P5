@@ -48,7 +48,7 @@ const quotes = new Quotes();
 quotes.initQuotes();
 
 function generateFromJson() {
-    sujetFromJson.innerHTML = quotes;
+    sujetFromJson.innerHTML = this.quotes;
     //aleatoire = Math.floor(Math.random() * sujet.length);
     //sujetId.innerHTML = sujet[aleatoire];
     //aleatoire = Math.floor(Math.random() * verbe.length);
