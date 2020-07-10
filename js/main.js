@@ -48,7 +48,7 @@ const quotes = new Quotes();
 quotes.initQuotes();
 
 function generateFromJson() {
-    sujetFromJson.innerHTML = this.quotes;
+    sujetFromJson.innerHTML = quotes.themeOne.start;
     //aleatoire = Math.floor(Math.random() * sujet.length);
     //sujetId.innerHTML = sujet[aleatoire];
     //aleatoire = Math.floor(Math.random() * verbe.length);
