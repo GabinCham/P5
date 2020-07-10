@@ -49,6 +49,14 @@ quotes.initQuotes();
 
 function generateFromJson() {
     sujetFromJson.innerHTML = quotes.themeOne.start;
+    console.log('this.quotes == ', this.quotes);
+    console.log('this.themeOne == ', this.themeOne);
+    console.log('this.response.themeOne == ', this.response.themeOne);
+    console.log('quotes == ', quotes);
+    console.log('this.quotes == ', this.quotes);
+    console.log('quotes.initQuotes() == ', quotes.initQuotes());
+    console.log('this.quotes.initQuotes() == ', this.quotes.initQuotes());
+
     //aleatoire = Math.floor(Math.random() * sujet.length);
     //sujetId.innerHTML = sujet[aleatoire];
     //aleatoire = Math.floor(Math.random() * verbe.length);
