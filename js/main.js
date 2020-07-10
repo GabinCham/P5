@@ -52,9 +52,9 @@ function generateFromJson() {
     // non pour : console.log('this.quotes == ', this.quotes);
     // non pour : console.log('this.themeOne == ', this.themeOne);
     // cannot read : console.log('this.response.themeOne == ', this.response.themeOne);
-    console.log('quotes == ', quotes);
-    console.log('this.quotes == ', this.quotes);
-    console.log('quotes.initQuotes() == ', quotes.initQuotes());
+    console.log('quotes == ', quotes); //trouve l'object mais celui tu ts surement
+   // non : console.log('this.quotes == ', this.quotes);
+   // non  : console.log('quotes.initQuotes() == ', quotes.initQuotes());
     console.log('this.quotes.initQuotes() == ', this.quotes.initQuotes());
 
     //aleatoire = Math.floor(Math.random() * sujet.length);
