@@ -1,12 +1,18 @@
 var sujet = ['Serge', 'John', 'Kurt', 'Mick'];
-var verbe = ['fait de la guitar', 'joue de la batterie', 'fait du piano', 'fait du triangle'];
+var verbe = ['fait de la guitare', 'joue de la batterie', 'fait du piano', 'fait du triangle'];
 var complement = ['à la plage.', 'sur scène.', 'sur la tour Eiffel.', 'nul part.'];
 
-alert('VERBE N3 == ', verbe[3]);
 
-const container = document.getElementById('container');
+const sujetId = document.getElementById('sujet');
+const sujetJson = document.getElementById('sujetJson');
+const verbeId = document.getElementById('verbe');
+const complementId = document.getElementById('complement');
 
-container.innerHTML = verbe[3];
+
+sujetId.innerHTML = sujet[3];
+verbeId.innerHTML = verbe[3];
+complementId.innerHTML = complement[3];
+
 
 class Quotes {
     constructor() {
@@ -19,6 +25,7 @@ class Quotes {
         xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 console.log(this.response);
+                this.themeOne = this.response.themeOne;
 // Requête finie, traitement ici.
             }
         }
@@ -28,3 +35,12 @@ class Quotes {
 
 const quotes = new Quotes();
 quotes.initQuotes();
+
+
+sujetJson.innerHTML = quotes.themeOne.start;
+
+
+
+// quotes.themeOne.start
+// voir onready & xml
+// bien comprendre code

@@ -1,7 +1,9 @@
 {
   "themeOne": {
-    "start": [],
-    "middle": [],
-    "end": []
+    "start": "SergeT1",
+    "middle": [
+      "fait de la guitareT1", "joue de la batterieT1", "fait du pianoT1", "fait du triangleT1"
+    ],
+    "end": ["à la plageT1.", "sur scèneT1.", "sur la tour EiffelT1.", "nul part.1T"]
   }
 }
