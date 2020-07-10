@@ -1,11 +1,11 @@
 var sujet = ['Serge', 'John', 'Kurt', 'Mick'];
 var verbe = ['fait de la guitare', 'joue de la batterie', 'fait du piano', 'fait du triangle'];
-var complement = ['à la plage.', 'sur scène.', 'sur la tour Eiffel.', 'nul part.'];
+var compl = ['à la plage.', 'sur scène.', 'sur la tour Eiffel.', 'nul part.'];
 var aleatoire = null;
 
 const sujetId = document.getElementById('sujet');
 const verbeId = document.getElementById('verbe');
-const complementId = document.getElementById('complement');
+const complId = document.getElementById('compl');
 const pullNumber = document.getElementById('choice-number');
 var responseNumberVar = document.getElementById('responseNumber');
 
@@ -15,7 +15,7 @@ const sujetFromJson = document.getElementById('sujetJson');
 console.log('chocie number', document.getElementById('choice-number').valueOf());
 //sujetId.innerHTML = sujet[3];
 //verbeId.innerHTML = verbe[3];
-//complementId.innerHTML = complement[3];
+//complId.innerHTML = compl[3];
 
 function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
@@ -30,13 +30,13 @@ function getNumber() {
 }
 
 function generate() {
-    // complementId.innerHTML = complement[2];
+    // complId.innerHTML = compl[2];
     aleatoire = Math.floor(Math.random() * sujet.length);
     sujetId.innerHTML = sujet[aleatoire];
     aleatoire = Math.floor(Math.random() * verbe.length);
     verbeId.innerHTML = verbe[aleatoire];
-    aleatoire = Math.floor(Math.random() * complement.length);
-    complementId.innerHTML = complement[aleatoire];
+    aleatoire = Math.floor(Math.random() * compl.length);
+    complId.innerHTML = compl[aleatoire];
 }
 
 
@@ -77,8 +77,8 @@ function generateFromJson() {
     //sujetId.innerHTML = sujet[aleatoire];
     //aleatoire = Math.floor(Math.random() * verbe.length);
     //verbeId.innerHTML = verbe[aleatoire];
-    //aleatoire = Math.floor(Math.random() * complement.length);
-    //complementId.innerHTML = complement[aleatoire];
+    //aleatoire = Math.floor(Math.random() * compl.length);
+    //complId.innerHTML = compl[aleatoire];
 }
 
 
