@@ -6,13 +6,28 @@ var aleatoire = null;
 const sujetId = document.getElementById('sujet');
 const verbeId = document.getElementById('verbe');
 const complementId = document.getElementById('complement');
+const pullNumber = document.getElementById('choice-number');
+var responseNumberVar = document.getElementById('responseNumber');
+
+
 
 const sujetFromJson = document.getElementById('sujetJson');
-
+console.log('chocie number', document.getElementById('choice-number').valueOf());
 //sujetId.innerHTML = sujet[3];
 //verbeId.innerHTML = verbe[3];
 //complementId.innerHTML = complement[3];
 
+function getNumber() {
+    var getNumber = document.getElementById("choice-number").value;
+    alert(getNumber);
+    if (getNumber === '2') {
+        alert('Vous avez choisi judiceusement');
+        return this.generate();
+    }
+    else {
+        alert('Wrong number');
+    }
+}
 
 function generate() {
     // complementId.innerHTML = complement[2];

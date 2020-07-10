@@ -23,6 +23,21 @@
         </div>
 </div>
     <button class="btn btn-success" id="generate" onClick="generate()">Générer</button>
+<!--
+    <div class="choice">
+    <input id="choice-number" type="number">
+    <label for="choice-number">Choisir un nombre</label>
+    <button class="btn btn-danger" id="getNumberOf" type="submit" onClick="getNumberOf()">Envoyer</button>
+    </div>
+-->
+
+    <form>
+        <p>Entrez un nombre entre 1 et 5</p>
+        <input type="number" name="choice-number" id="choice-number" /><br /><br />
+        <input type="submit" onClick="getNumber()" />
+    </form>
+
+    <div id="responseNumber"></div>
 
     <div class="row">
         <div class="col">
