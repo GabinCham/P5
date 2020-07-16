@@ -78,11 +78,12 @@ class Quotes {
     initQuotes() {
         var xhr = new XMLHttpRequest()
         xhr.open('GET', '/P5/data/quotes.json', true);
+        let self = this;
         xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 let response  = JSON.parse(this.response);
                 console.log(response);
-                this.themeOne = response.themeOne;
+                self.themeOne = response.themeOne;
 
 // Requête finie, traitement ici.
             }
