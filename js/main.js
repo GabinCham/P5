@@ -87,6 +87,12 @@ class Quotes {
         }
         xhr.send(null);
     }
+    generateQuotesFromThemeOne() {
+        let start = this.themeOne.start[Math.floor(Math.random() * this.themeOne.start.length)];
+        let middle = this.themeOne.middle[Math.floor(Math.random() * this.themeOne.middle.length)];
+        let end = this.themeOne.end[Math.floor(Math.random() * this.themeOne.end.length)];
+        return `${start} ${middle} ${end}`;
+    }
 }
 
 const quotes = new Quotes();
@@ -95,26 +101,16 @@ quotes.initQuotes();
 // Generation d'une Theme au click
 // (À faire: TOUT)
 // Remplacera la fonction generateThemeOne & Two
-function generateFromJson() {
-    sujetFromJson.innerHTML = quotes.themeOne.start;
-    console.log('fonction iniQuotes == ', this.initQuotes().themeOne.start);
-    // non pour : console.log('this.quotes == ', this.quotes);
-    // non pour : console.log('this.themeOne == ', this.themeOne);
-    // cannot read : console.log('this.response.themeOne == ', this.response.themeOne);
-    console.log('quotes == ', quotes); //trouve l'object mais celui tu ts surement
-    // non : console.log('this.quotes == ', this.quotes);
-    // non  : console.log('quotes.initQuotes() == ', quotes.initQuotes());
-    console.log('this.quotes.initQuotes() == ', this.quotes.initQuotes());
 
-    //aleatoire = Math.floor(Math.random() * sujet.length);
-    //sujetId.innerHTML = sujet[aleatoire];
-    //aleatoire = Math.floor(Math.random() * verbe.length);
-    //verbeId.innerHTML = verbe[aleatoire];
-    //aleatoire = Math.floor(Math.random() * compl.length);
-    //complId.innerHTML = compl[aleatoire];
+
+function generateQuotes(quotes) {
+console.log(quotes.generateQuotesFromThemeOne());
 }
 
 
+document.getElementById('generateQuotes').addEventListener('click', function () {
+generateQuotes(quotes);
+})
 
 // NOTES ://
 
