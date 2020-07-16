@@ -1,6 +1,8 @@
 {
   "themeOne": {
-    "start": "SergeT1",
+    "start": [
+      "Serge", "Mick", "Krut", "John"
+    ],
     "middle": [
       "fait de la guitareT1", "joue de la batterieT1", "fait du pianoT1", "fait du triangleT1"
     ],
