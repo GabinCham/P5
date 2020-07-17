@@ -6,7 +6,20 @@
     "middle": [
       "fait de la guitareT1", "joue de la batterieT1", "fait du pianoT1", "fait du triangleT1"
     ],
-    "end": ["à la plageT1.", "sur scèneT1.", "sur la tour EiffelT1.", "nul part.1T"]
+    "end": [
+      "à la plageT1.", "sur scèneT1.", "sur la tour EiffelT1.", "nul part.1T"
+    ]
+  },
+  "themeTwo": {
+    "start": [
+      "start2", "saaaat2", "sgzg2", "sssss2"
+    ],
+    "middle": [
+      "middle2", "middd2", "mmzefz2", "mmmmm2"
+    ],
+    "end": [
+      "end2", "eeendd2", "eennnnd2", "e2"
+    ]
   }
 }
 

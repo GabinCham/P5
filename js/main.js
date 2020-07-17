@@ -96,6 +96,12 @@ class Quotes {
         let end = this.themeOne.end[Math.floor(Math.random() * this.themeOne.end.length)];
         return `${start} ${middle} ${end}`;
     }
+    generateQuotesFromThemeTwo() {
+        let start = this.themeTwo.start[Math.floor(Math.random() * this.themeTwo.start.length)];
+        let middle = this.themeTwo.middle[Math.floor(Math.random() * this.themeTwo.middle.length)];
+        let end = this.themeTwo.end[Math.floor(Math.random() * this.themeTwo.end.length)];
+        return `${start} ${middle} ${end}`;
+    }
 }
 
 const quotes = new Quotes();
@@ -108,11 +114,15 @@ quotes.initQuotes();
 
 function generateQuotes(quotes) {
 console.log(quotes.generateQuotesFromThemeOne());
+console.log(quotes.generateQuotesFromThemeTwo());
 }
 
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
 generateQuotes(quotes);
+})
+document.getElementById('generateQuotesTwo').addEventListener('click', function () {
+    generateQuotes(quotes);
 })
 
 // NOTES ://
@@ -120,3 +130,12 @@ generateQuotes(quotes);
 // quotes.themeOne.start
 // voir onready & xml
 // bien comprendre code
+
+
+
+//VENDREDI 17
+// d'abord vider container pour le re remplir
+//theme 2, de une a cinq citations generer
+//controler le theme le choix du theme
+//theme 2 json
+//selectionner theme
