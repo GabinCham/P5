@@ -1,15 +1,15 @@
-function getNumber() {
-    var getNumber = document.getElementById("choice-number").value;
-    // alert(getNumber);
-    if (getNumber === '1') {
-        return generateQuotes()*2;
-    } else if (getNumber === '2') {
-        alert('Vous avez choisi judiceusement');
-        return this.generateThemeOne();
-    } else {
-        return alert('Wrong number');
-    }
-}
+//function getNumber() {
+//    var getNumber = document.getElementById("choice-number").value;
+//    // alert(getNumber);
+ //   if (getNumber === '1') {
+ //       return generateQuotes()*2;
+ //   } else if (getNumber === '2') {
+ //       alert('Vous avez choisi judiceusement');
+  //      return this.generateThemeOne();
+   // } else {
+  //      return alert('Wrong number');
+   // }
+//}
 
 
 class Quotes {
