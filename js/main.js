@@ -40,7 +40,12 @@ function getTheme() {
 function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
     alert(getNumber);
-    if (getNumber === '2') {
+    if (getNumber === '1') {
+        return document.getElementById('generateQuotes').addEventListener('click', function () {
+            generateQuotes();
+        });
+    }
+    else if (getNumber === '2') {
         alert('Vous avez choisi judiceusement');
         return this.generateThemeOne();
     } else {
