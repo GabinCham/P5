@@ -113,12 +113,10 @@ quotes.initQuotes();
 
 
 function generateQuotes(quotes) {
-console.log(quotes.generateQuotesFromThemeOne());
+// console.log(quotes.generateQuotesFromThemeOne());
 const themeOneQuote = document.getElementById('themeone');
 themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
-// return quotes.generateQuotesFromThemeOne();
-
-//console.log(quotes.generateQuotesFromThemeTwo());
+console.log(quotes.generateQuotesFromThemeTwo());
 }
 
 
