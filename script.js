@@ -11,16 +11,6 @@ function getNumber() {
     }
 }
 
-// Genere une phrase du ThemeOne au click
-// (À faire: Regrouper en une fonction avec conditions après JSON)
-function generateThemeOne() {
-    aleatoire = Math.floor(Math.random() * sujet.length);
-    sujetId.innerHTML = sujet[aleatoire];
-    aleatoire = Math.floor(Math.random() * verbe.length);
-    verbeId.innerHTML = verbe[aleatoire];
-    aleatoire = Math.floor(Math.random() * compl.length);
-    complId.innerHTML = compl[aleatoire];
-}
 
 class Quotes {
     constructor() {
