@@ -39,7 +39,7 @@ function getTheme() {
 // (Problème: Page recharge au submit / À faire: afficher le nombre de citations demandés)
 function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
-    alert(getNumber);
+    // alert(getNumber);
     if (getNumber === '1') {
         return generateQuotes();
     } else if (getNumber === '2') {

@@ -9,3 +9,11 @@
 h1, #generate {
     text-align: center;
 }
+
+#themeone {
+    color: darkcyan;
+}
+
+#themetwo {
+    color: royalblue;
+}
