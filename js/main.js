@@ -134,6 +134,8 @@ function generateQuotes() {
 // console.log(quotes.generateQuotesFromThemeOne());
 const themeOneQuote = document.getElementById('themeone');
 themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
+const themeTwoQuote = document.getElementById('themetwo');
+themeOneQuote.innerHTML = quotes.generateQuotesFromThemeTwo();
 //console.log(quotes.generateQuotesFromThemeTwo());
 }
 
