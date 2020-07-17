@@ -114,9 +114,9 @@ quotes.initQuotes();
 
 function generateQuotes(quotes) {
 console.log(quotes.generateQuotesFromThemeOne());
-const themeOneQuote = document.getElementById('container');
+const themeOneQuote = document.getElementById('themeone');
 themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
-
+// return quotes.generateQuotesFromThemeOne();
 
 //console.log(quotes.generateQuotesFromThemeTwo());
 }
