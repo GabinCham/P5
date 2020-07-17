@@ -114,16 +114,17 @@ quotes.initQuotes();
 
 function generateQuotes(quotes) {
 console.log(quotes.generateQuotesFromThemeOne());
-console.log(quotes.generateQuotesFromThemeTwo());
+//console.log(quotes.generateQuotesFromThemeTwo());
 }
 
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
 generateQuotes(quotes);
-})
-document.getElementById('generateQuotesTwo').addEventListener('click', function () {
-    generateQuotes(quotes);
-})
+});
+
+//document.getElementById('generateQuotesTwo').addEventListener('click', function () {
+ //   generateQuotes(quotes);
+//})
 
 // NOTES ://
 
