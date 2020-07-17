@@ -92,26 +92,12 @@ class Quotes {
         }
         xhr.send(null);
     }
-    initQuotesThemeTwo() {
-        var xhr = new XMLHttpRequest()
-        xhr.open('GET', '/P5/data/quotes.json', true);
-        let self = this;
-        xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
-            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                let response  = JSON.parse(this.response);
-                console.log(response);
-                self.themeTwo = response.themeTwo;
 
-// Requête finie, traitement ici.
-            }
-        }
-        xhr.send(null);
-    }
     generateQuotesFromThemeOne() {
         let start = this.themeOne.start[Math.floor(Math.random() * this.themeOne.start.length)];
         let middle = this.themeOne.middle[Math.floor(Math.random() * this.themeOne.middle.length)];
         let end = this.themeOne.end[Math.floor(Math.random() * this.themeOne.end.length)];
-        return `${start} ${middle} ${end}`*2;
+        return `${start} ${middle} ${end}`;
     }
     generateQuotesFromThemeTwo() {
         let start = this.themeTwo.start[Math.floor(Math.random() * this.themeTwo.start.length)];
