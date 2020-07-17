@@ -111,7 +111,7 @@ class Quotes {
         let start = this.themeOne.start[Math.floor(Math.random() * this.themeOne.start.length)];
         let middle = this.themeOne.middle[Math.floor(Math.random() * this.themeOne.middle.length)];
         let end = this.themeOne.end[Math.floor(Math.random() * this.themeOne.end.length)];
-        return `${start} ${middle} ${end}`;
+        return `${start} ${middle} ${end}`*2;
     }
     generateQuotesFromThemeTwo() {
         let start = this.themeTwo.start[Math.floor(Math.random() * this.themeTwo.start.length)];
