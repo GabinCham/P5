@@ -9,7 +9,7 @@
 </head>
 <body id="citation-page">
 
-<h1>Générateur de Citation</h1>
+<h1>Générateur de Citation2</h1>
 
 <div class="container">
     <div class="row">
@@ -40,8 +40,9 @@
         <button class="btn btn-success" id="generateThemeTwo" onClick="generateThemeTwo()">Générer theme two</button>
 
             <p>Entrez un nombre entre 1 et 5</p>
-            <label for="choice-number">Choix :</label><input type="number" name="choice-number"
-                                                             id="choice-number"/><br/><br/>
+
+            <label for="choice-number">Choix :</label>
+             <input type="number" name="choice-number" id="choice-number" pattern="[0-5]" min="1" max="5"/><br/><br/>
             <input type="submit" onClick="getNumber()" value="Choisir nombre citations"/>
 
             <p>Choisir un theme (Theme 1 ou 2)</p>

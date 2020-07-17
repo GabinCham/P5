@@ -90,6 +90,21 @@ class Quotes {
         }
         xhr.send(null);
     }
+    initQuotesThemeTwo() {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', '/P5/data/quotes.json', true);
+        let self = this;
+        xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                let response  = JSON.parse(this.response);
+                console.log(response);
+                self.themeTwo = response.themeTwo;
+
+// Requête finie, traitement ici.
+            }
+        }
+        xhr.send(null);
+    }
     generateQuotesFromThemeOne() {
         let start = this.themeOne.start[Math.floor(Math.random() * this.themeOne.start.length)];
         let middle = this.themeOne.middle[Math.floor(Math.random() * this.themeOne.middle.length)];
@@ -107,16 +122,19 @@ class Quotes {
 const quotes = new Quotes();
 quotes.initQuotes();
 
+const quotesThemeTwo = new Quotes()
+quotesThemeTwo.initQuotesThemeTwo();
+
 // Generation d'une Theme au click
 // (À faire: TOUT)
 // Remplacera la fonction generateThemeOne & Two
 
 
-function generateQuotes(quotes) {
+function generateQuotes() {
 // console.log(quotes.generateQuotesFromThemeOne());
 const themeOneQuote = document.getElementById('themeone');
 themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
-console.log(quotes.generateQuotesFromThemeTwo());
+//console.log(quotes.generateQuotesFromThemeTwo());
 }
 
 
