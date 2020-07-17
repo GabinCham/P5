@@ -139,7 +139,7 @@ themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
 
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
-generateQuotes(quotes);
+generateQuotes();
 });
 
 //document.getElementById('generateQuotesTwo').addEventListener('click', function () {
