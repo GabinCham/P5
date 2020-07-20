@@ -17,6 +17,7 @@ class Quotes {
         this.themeOne = {}
     }
 
+    
     initQuotes() {
         var xhr = new XMLHttpRequest()
         xhr.open('GET', '/P5/data/quotes.json', true);
