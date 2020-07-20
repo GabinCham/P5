@@ -75,6 +75,8 @@ function generateThemeTwo() {
 class Quotes {
     constructor() {
         this.themeOne = {}
+        this.themeTwo = {}
+
     }
 
     initQuotes() {
@@ -86,6 +88,7 @@ class Quotes {
                 let response  = JSON.parse(this.response);
                 console.log(response);
                 self.themeOne = response.themeOne;
+                self.themeOne = response.themeTwo;
 
 // Requête finie, traitement ici.
             }
@@ -109,9 +112,6 @@ class Quotes {
 
 const quotes = new Quotes();
 quotes.initQuotes();
-
-const quotesThemeTwo = new Quotes()
-quotesThemeTwo.initQuotesThemeTwo();
 
 // Generation d'une Theme au click
 // (À faire: TOUT)
