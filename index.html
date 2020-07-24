@@ -11,73 +11,34 @@
 </head>
 <body id="citation-page">
 
-<h1>Générateur de Citation</h1>
-
-<!--
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col">
-            <p id="sujet"></p>
-        </div>
-        <div class="col">
-            <p id="verbe"></p>
-        </div>
-        <div class="col">
-            <p id="compl"></p>
+            <h1>Générateur de Citation</h1>
+            <p>Entrez un nombre entre 1 et 5</p>
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">1-5</span>
+                </div>
+                <input type="number" class="form-control"
+                       placeholder="Choisir un nombre entre 1 et 5"
+                       aria-label="number"
+                       aria-describedby="addon-wrapping"
+                       id="choice-number"
+                       pattern="[1-5]"
+                       min="1"
+                       max="5">
+                <input type="submit"
+                       onClick="getNumber()"
+                       value="Générer citation par nombre"/>
+            </div>
+            <div id="themeone"></div>
+            <div id="themetwo"></div>
+            <p>Ou Générer simplement</p>
+            <button class="btn btn-primary" id="generateQuotes">Générer citation</button>
         </div>
     </div>
-    <button class="btn btn-success" id="generateThemeOne" onClick="generateThemeOne()">Générer theme one</button>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p id="sujetTwo"></p>
-            </div>
-            <div class="col">
-                <p id="verbeTwo"></p>
-            </div>
-            <div class="col">
-                <p id="complTwo"></p>
-            </div>
-        </div>
-        <button class="btn btn-success" id="generateThemeTwo" onClick="generateThemeTwo()">Générer theme two</button>
-
-
-
-            <p>Choisir un theme (Theme 1 ou 2)</p>
-            <label for="pull-get-theme">Alors ?</label><input type="number" name="pull-get-theme" id="pull-get-theme">
-            <input type="submit" onClick="getTheme()" value="Choisir theme">
-
-        <div id="responseNumber"></div>
-
-
-        <div class="row">
-            <div class="col">
-                <p id="sujetJson"></p>
-            </div>
-            <div class="col">
-                <p id="verbeJson"></p>
-            </div>
-            <div class="col">
-                <p id="complementJson"></p>
-            </div>
-        </div>
-        -->
-<p>Entrez un nombre entre 1 et 5</p>
-
-<label for="choice-number">Choix :</label>
-<input type="number" name="choice-number" id="choice-number" pattern="[1-5]" min="1" max="5"/><br/><br/>
-<input type="submit" onClick="getNumber()" value="Générer citation par nombre"/>
-
-<div id="themeone"></div>
-<div id="themetwo"></div>
-<p>Ou Générer simplement</p>
-<button class="btn btn-primary" id="generateQuotes">Générer citation</button>
-
-
-<!--<button class="btn btn-primary" id="generateQuotesTwo">Générer </button>-->
-
-
+</div>
 </div>
 </body>
 <script src="script.js"></script>
