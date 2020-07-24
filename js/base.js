@@ -35,8 +35,10 @@ function getTheme() {
     }
 }
 
-// Récupération du choix du nombre de citations + Execution
-// (Problème: Page recharge au submit / À faire: afficher le nombre de citations demandés)
+/**
+ * Retourne nombre de citation choisi
+ * @return {string}
+ */
 function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
     // alert(getNumber);
@@ -50,8 +52,10 @@ function getNumber() {
     }
 }
 
-// Genere une phrase du ThemeOne au click
-// (À faire: Regrouper en une fonction avec conditions après JSON)
+/**
+ * Genere une phrase du ThemeOne au click
+ *(À faire: Regrouper en une fonction avec conditions après JSON)
+ */
 function generateThemeOne() {
     aleatoire = Math.floor(Math.random() * sujet.length);
     sujetId.innerHTML = sujet[aleatoire];
@@ -150,3 +154,4 @@ generateQuotes();
 //controler le theme le choix du theme
 //theme 2 json
 //selectionner theme
+

@@ -1,15 +1,5 @@
-//function getNumber() {
-//    var getNumber = document.getElementById("choice-number").value;
-//    // alert(getNumber);
- //   if (getNumber === '1') {
- //       return generateQuotes()*2;
- //   } else if (getNumber === '2') {
- //       alert('Vous avez choisi judiceusement');
-  //      return this.generateThemeOne();
-   // } else {
-  //      return alert('Wrong number');
-   // }
-//}
+const quotes = new Quotes();
+quotes.initQuotes();
 
 
 class Quotes {
@@ -22,18 +12,20 @@ class Quotes {
         var xhr = new XMLHttpRequest()
         xhr.open('GET', '/P5/data/quotes.json', true);
         let self = this;
-        xhr.onreadystatechange = function () { //Appelle une fonction au changement d'état.
+        xhr.onreadystatechange = function () {
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 let response = JSON.parse(this.response);
                 console.log(response);
                 self.themeOne = response.themeOne;
-
-// Requête finie, traitement ici.
             }
         }
         xhr.send(null);
     }
 
+    /**
+     * Genere et retourne une citation aléatoire du theme numero un.
+     * @return {string} Citation theme un
+     */
     generateQuotesFromThemeOne() {
         let start = this.themeOne.start[Math.floor(Math.random() * this.themeOne.start.length)];
         let middle = this.themeOne.middle[Math.floor(Math.random() * this.themeOne.middle.length)];
@@ -42,17 +34,29 @@ class Quotes {
     }
 }
 
-
-const quotes = new Quotes();
-quotes.initQuotes();
-
+/**
+ * Permet generer citation et insérer dans le container
+ */
 function generateQuotes() {
     const themeOneQuote = document.getElementById('themeone');
     themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
-
 }
 
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
     generateQuotes();
 });
+
+/**
+ * Retourne nombre de citation choisi
+ */
+function getNumber() {
+    var getNumber = document.getElementById("choice-number").value;
+    alert(getNumber);
+    if (getNumber === '1' || getNumber === '2') {
+        return getNumber;
+    } else {
+        alert('faux');
+        return undefined;
+    }
+}

@@ -7,7 +7,7 @@
       "fait de la guitare", "joue de la batterie", "fait du piano", "fait du triangle"
     ],
     "end": [
-      "à la plage.", "sur scène.", "sur la tour Eiffel.", "nul part.1T"
+      "à la plage.", "sur scène.", "sur la tour Eiffel.", "nul part"
     ]
   },
   "themeTwo": {
@@ -22,4 +22,3 @@
     ]
   }
 }
-
