@@ -39,24 +39,32 @@ class Quotes {
  */
 function generateQuotes() {
     const themeOneQuote = document.getElementById('themeone');
-    themeOneQuote.innerHTML = quotes.generateQuotesFromThemeOne();
+    themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
 }
-
-
-document.getElementById('generateQuotes').addEventListener('click', function () {
-    generateQuotes();
-});
 
 /**
  * Retourne nombre de citation choisi
  */
 function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
-    alert(getNumber);
-    if (getNumber === '1' || getNumber === '2') {
-        return getNumber;
+    // alert(getNumber);
+    let realValue = parseInt(getNumber);
+    if (realValue === 1 || realValue === 2 ) {
+        return realValue;
     } else {
         alert('faux');
         return undefined;
     }
 }
+
+document.getElementById('generateQuotes').addEventListener('click', function () {
+    let numberOfCitation = getNumber()
+    if (numberOfCitation) {
+        for (let i = 0; i < numberOfCitation; i++ ) {
+            generateQuotes();
+        }
+    }
+
+});
+
+
