@@ -1,7 +1,3 @@
-const quotes = new Quotes();
-quotes.initQuotes();
-
-
 class Quotes {
     constructor() {
         this.themeOne = {}
@@ -66,5 +62,8 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
     }
 
 });
+
+const quotes = new Quotes();
+quotes.initQuotes();
 
 
