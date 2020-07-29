@@ -45,7 +45,7 @@ function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
     // alert(getNumber);
     let realValue = parseInt(getNumber);
-    if (realValue === 1 || realValue === 2 ) {
+    if (realValue >= 1 && realValue <= 5 ) {
         return realValue;
     } else {
         alert('faux');
@@ -65,5 +65,4 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
 
 const quotes = new Quotes();
 quotes.initQuotes();
-
 
