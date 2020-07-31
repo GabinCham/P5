@@ -42,7 +42,6 @@ function resetContainer() {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-    resetContainer();
     const themeOneQuote = document.getElementById('themeone');
     themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
 }
@@ -68,6 +67,7 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
         for (let i = 0; i < numberOfCitation; i++ ) {
             generateQuotes();
         }
+        resetContainer();
     }
 
 });
