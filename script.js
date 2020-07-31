@@ -39,8 +39,8 @@ function resetContainer() {
  */
 function generateQuotes() {
     const themeOneQuote = document.getElementById('themeone');
-    // resetContainer();
     themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
+    resetContainer();
 }
 
 /**
