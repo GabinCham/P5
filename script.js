@@ -31,16 +31,20 @@ class Quotes {
     }
 }
 
+/**
+ * Vide le contenue de la div
+ */
 function resetContainer() {
     document.getElementById("themeone").innerHTML = "";
-};
+}
+
 /**
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
+    resetContainer();
     const themeOneQuote = document.getElementById('themeone');
     themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
-    resetContainer();
 }
 
 /**
