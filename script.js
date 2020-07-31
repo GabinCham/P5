@@ -35,6 +35,8 @@ class Quotes {
  */
 function generateQuotes() {
     const themeOneQuote = document.getElementById('themeone');
+    $('.themeone').empty();
+    
     themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
 }
 
@@ -65,4 +67,3 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
 
 const quotes = new Quotes();
 quotes.initQuotes();
-
