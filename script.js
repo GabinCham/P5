@@ -18,6 +18,7 @@ class Quotes {
         xhr.send(null);
     }
 
+
     /**
      * Genere et retourne une citation aléatoire du theme numero un.
      * @return {string} Citation theme un
@@ -30,13 +31,15 @@ class Quotes {
     }
 }
 
+function resetContainer() {
+    document.getElementById("themeone").innerHTML = "";
+};
 /**
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
     const themeOneQuote = document.getElementById('themeone');
-    $('.themeone').empty();
-    
+    resetContainer();
     themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
 }
 
