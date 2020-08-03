@@ -91,10 +91,10 @@ function getNumber() {
 }
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
+    resetContainer();
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++ ) {
-            resetContainer();
             generateQuotes();
         }
     }
