@@ -44,7 +44,11 @@ class Quotes {
  * Vide le contenue de la div
  */
 function resetContainer() {
-    document.getElementById("themeone").innerHTML = "";
+    document.getElementById("test").innerHTML = "";
+}
+
+function remplirContainer() {
+    document.getElementById("test").innerHTML = "hello";
 }
 
 /**
@@ -53,7 +57,7 @@ function resetContainer() {
 function generateQuotes() {
     var getTheme = document.getElementById("choice-theme").value;
    // let realValue = parseInt(getTheme);
-    resetContainer();
+    // resetContainer();
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
