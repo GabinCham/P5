@@ -32,6 +32,7 @@ class Quotes {
         let end = this.themeOne.end[Math.floor(Math.random() * this.themeOne.end.length)];
         return `${start} ${middle} ${end} <br>`;
     }
+
     generateQuotesFromThemeTwo() {
         let start = this.themeTwo.start[Math.floor(Math.random() * this.themeTwo.start.length)];
         let middle = this.themeTwo.middle[Math.floor(Math.random() * this.themeTwo.middle.length)];
@@ -45,7 +46,7 @@ class Quotes {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-   // document.getElementById('themeone').innerHTML = "";
+    // document.getElementById('themeone').innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
@@ -66,7 +67,7 @@ function getNumber() {
     var getNumber = document.getElementById("choice-number").value;
     // alert(getNumber);
     let realValue = parseInt(getNumber);
-    if (realValue >= 1 && realValue <= 5 ) {
+    if (realValue >= 1 && realValue <= 5) {
         return realValue;
     } else {
         alert('faux');
@@ -77,7 +78,7 @@ function getNumber() {
 document.getElementById('generateQuotes').addEventListener('click', function () {
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
-        for (let i = 0; i < numberOfCitation; i++ ) {
+        for (let i = 0; i < numberOfCitation; i++) {
             generateQuotes();
         }
     }
