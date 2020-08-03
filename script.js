@@ -51,8 +51,9 @@ function resetContainer() {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-    //const themeOneQuote = document.getElementById('themeone');
-   // themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
+    var getTheme = document.getElementById("choice-theme").value;
+    const themeOneQuote = document.getElementById('themeone');
+    themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
     const themeTwoQuote = document.getElementById('themetwo');
     themeTwoQuote.innerHTML += quotes.generateQuotesFromThemeTwo();
 }
@@ -82,6 +83,7 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
     }
 
 });
+
 
 const quotes = new Quotes();
 quotes.initQuotes();
