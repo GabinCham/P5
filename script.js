@@ -44,7 +44,7 @@ class Quotes {
  * Vide le contenue de la div
  */
 function resetContainer() {
-    document.getElementById("container-quotes").innerHTML = "";
+    document.getElementById("themeone").innerHTML = "";
 }
 
 function remplirContainer() {
@@ -60,15 +60,15 @@ function resterPuisRemplir() {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-    document.getElementById('container-quotes').innerHTML = "";
+    document.getElementById('themeone').innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
    // let realValue = parseInt(getTheme);
     // resetContainer();
     if (getTheme === 'Harry Potter') {
-        const themeOneQuote = document.getElementById('container-quotes');
+        const themeOneQuote = document.getElementById('themeone');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
     } else if (getTheme === 'Lord of the rings') {
-        const themeTwoQuote = document.getElementById('container-quotes');
+        const themeTwoQuote = document.getElementById('themetwo');
         themeTwoQuote.innerHTML += quotes.generateQuotesFromThemeTwo();
     } else {
         alert('Veuillez choisir une theme.')
