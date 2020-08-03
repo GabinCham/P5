@@ -47,6 +47,7 @@ class Quotes {
  */
 function generateQuotes() {
     document.getElementById("themeone").innerHTML = "";
+    document.getElementById("themetwo").innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
