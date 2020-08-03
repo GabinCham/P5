@@ -15,22 +15,12 @@
     <div class="row justify-content-center">
         <div class="col">
             <h1>Générateur de Citation</h1>
-            <div class="input-group flex-nowrap">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">1-5</span>
-                </div>
-                <input type="number" class="form-control"
-                       placeholder="Choisir theme 1 ou 2"
-                       aria-label="number"
-                       aria-describedby="addon-wrapping"
-                       id="choice-theme"
-                       pattern="[1-2]"
-                       min="1"
-                       max="2">
-                <input type="submit"
-                       onClick="getNumber()"
-                       value="Générer citation theme"/>
-            </div>
+            <div class="form-group">
+                <label for="choice-theme">Choisir un thème</label>
+                <select class="form-control" id="choice-theme">
+                    <option>Thème 1</option>
+                    <option>Thème 2</option>
+                </select>
 
             <p>Entrez un nombre entre 1 et 5</p>
             <div class="input-group flex-nowrap">
