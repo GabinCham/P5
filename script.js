@@ -44,7 +44,7 @@ class Quotes {
  * Vide le contenue de la div
  */
 function resetContainer() {
-    document.getElementById("test").innerHTML = "";
+    document.getElementById("themeone").innerHTML = "";
 }
 
 function remplirContainer() {
@@ -91,7 +91,7 @@ function getNumber() {
 }
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
-    resetContainer();
+   resetContainer();
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++ ) {
