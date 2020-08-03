@@ -52,11 +52,11 @@ function resetContainer() {
  */
 function generateQuotes() {
     var getTheme = document.getElementById("choice-theme").value;
-    let realValue = parseInt(getTheme);
-    if (realValue === 1) {
+   // let realValue = parseInt(getTheme);
+    if (getTheme === 'Thème 1') {
         const themeOneQuote = document.getElementById('themeone');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
-    } else if (realValue === 2) {
+    } else if (getTheme === 'Thème 2') {
         const themeTwoQuote = document.getElementById('themetwo');
         themeTwoQuote.innerHTML += quotes.generateQuotesFromThemeTwo();
     } else {
