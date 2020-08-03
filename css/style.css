@@ -37,3 +37,7 @@ input {
 #choice-number {
     margin-right: 0.5em;
 }
+
+.choice-theme {
+    color: grey;
+}
