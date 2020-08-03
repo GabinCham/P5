@@ -60,15 +60,15 @@ function resterPuisRemplir() {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-    document.getElementById('themeone').innerHTML = "";
+    document.getElementById('container-quotes').innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
    // let realValue = parseInt(getTheme);
     // resetContainer();
     if (getTheme === 'Harry Potter') {
-        const themeOneQuote = document.getElementById('themeone');
+        const themeOneQuote = document.getElementById('container-quotes');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
     } else if (getTheme === 'Lord of the rings') {
-        const themeTwoQuote = document.getElementById('themetwo');
+        const themeTwoQuote = document.getElementById('container-quotes');
         themeTwoQuote.innerHTML += quotes.generateQuotesFromThemeTwo();
     } else {
         alert('Veuillez choisir une theme.')
