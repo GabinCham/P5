@@ -53,6 +53,7 @@ function resetContainer() {
 function generateQuotes() {
     var getTheme = document.getElementById("choice-theme").value;
    // let realValue = parseInt(getTheme);
+    resetContainer();
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
@@ -86,7 +87,6 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
         for (let i = 0; i < numberOfCitation; i++ ) {
             generateQuotes();
         }
-        // resetContainer();
     }
 
 });
