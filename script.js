@@ -40,6 +40,21 @@ class Quotes {
     }
 }
 
+/**
+ * Vide le contenue de la div
+ */
+function resetContainer() {
+    document.getElementById("themeone").innerHTML = "";
+}
+
+function remplirContainer() {
+    document.getElementById("test").innerHTML = "hello";
+}
+
+function resterPuisRemplir() {
+    resetContainer();
+    remplirContainer();
+}
 
 /**
  * Permet generer citation et insérer dans le container
@@ -47,6 +62,8 @@ class Quotes {
 function generateQuotes() {
     document.getElementById('themeone').innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
+   // let realValue = parseInt(getTheme);
+    // resetContainer();
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
@@ -75,6 +92,7 @@ function getNumber() {
 }
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
+   resetContainer();
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++ ) {
