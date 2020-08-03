@@ -46,7 +46,7 @@ class Quotes {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-    document.getElementById("themeone").innerHTML = "";
+   // document.getElementById("themeone").innerHTML = "";
     // document.getElementById("themetwo").innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
     if (getTheme === 'Harry Potter') {
@@ -76,6 +76,7 @@ function getNumber() {
 }
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
+    document.getElementById("themeone").innerHTML = "";
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++) {
