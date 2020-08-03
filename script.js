@@ -48,6 +48,7 @@ function resetContainer() {
 }
 
 function remplirContainer() {
+    resetContainer();
     document.getElementById("test").innerHTML = "hello";
 }
 
