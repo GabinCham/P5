@@ -56,7 +56,7 @@ function generateQuotes() {
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
         themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
-    } else if (getTheme === 'Thème 2') {
+    } else if (getTheme === 'Lord of the rings') {
         const themeTwoQuote = document.getElementById('themetwo');
         themeTwoQuote.innerHTML += quotes.generateQuotesFromThemeTwo();
     } else {
