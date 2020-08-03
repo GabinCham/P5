@@ -67,7 +67,7 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
         for (let i = 0; i < numberOfCitation; i++ ) {
             generateQuotes();
         }
-        resetContainer();
+        // resetContainer();
     }
 
 });
