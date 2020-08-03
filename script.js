@@ -94,6 +94,7 @@ document.getElementById('generateQuotes').addEventListener('click', function () 
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++ ) {
+            resetContainer();
             generateQuotes();
         }
     }
