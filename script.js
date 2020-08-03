@@ -1,6 +1,7 @@
 class Quotes {
     constructor() {
         this.themeOne = {}
+        this.themeTwo = {}
     }
 
 
@@ -13,6 +14,8 @@ class Quotes {
                 let response = JSON.parse(this.response);
                 console.log(response);
                 self.themeOne = response.themeOne;
+                self.themeTwo = response.themeTwo;
+
             }
         }
         xhr.send(null);
@@ -29,6 +32,12 @@ class Quotes {
         let end = this.themeOne.end[Math.floor(Math.random() * this.themeOne.end.length)];
         return `${start} ${middle} ${end} <br>`;
     }
+    generateQuotesFromThemeTwo() {
+        let start = this.themeTwo.start[Math.floor(Math.random() * this.themeTwo.start.length)];
+        let middle = this.themeTwo.middle[Math.floor(Math.random() * this.themeTwo.middle.length)];
+        let end = this.themeTwo.end[Math.floor(Math.random() * this.themeTwo.end.length)];
+        return `${start} ${middle} ${end} <br>`;
+    }
 }
 
 /**
@@ -42,8 +51,10 @@ function resetContainer() {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-    const themeOneQuote = document.getElementById('themeone');
-    themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
+    //const themeOneQuote = document.getElementById('themeone');
+   // themeOneQuote.innerHTML += quotes.generateQuotesFromThemeOne();
+    const themeTwoQuote = document.getElementById('themetwo');
+    themeTwoQuote.innerHTML += quotes.generateQuotesFromThemeTwo();
 }
 
 /**
