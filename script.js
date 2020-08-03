@@ -60,6 +60,7 @@ function resterPuisRemplir() {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
+    document.getElementById('themeone').innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
    // let realValue = parseInt(getTheme);
     // resetContainer();
@@ -91,7 +92,7 @@ function getNumber() {
 }
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
-   resetContainer();
+   //resetContainer();
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++ ) {
