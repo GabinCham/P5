@@ -30,15 +30,12 @@ div.row {
     text-align: center;
 }
 
-input {
-    background-color: #1e7e34;
-    border: none;
-}
 
 #choice-number {
     margin-right: 0.5em;
 }
 
-.choice-theme {
-    color: grey;
+
+#generateQuotes {
+    margin: 2em
 }
