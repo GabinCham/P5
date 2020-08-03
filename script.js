@@ -77,6 +77,7 @@ function getNumber() {
 
 document.getElementById('generateQuotes').addEventListener('click', function () {
     document.getElementById("themeone").innerHTML = "";
+    document.getElementById("themetwo").innerHTML = "";
     let numberOfCitation = getNumber()
     if (numberOfCitation) {
         for (let i = 0; i < numberOfCitation; i++) {
