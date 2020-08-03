@@ -44,7 +44,7 @@ class Quotes {
  * Vide le contenue de la div
  */
 function resetContainer() {
-    document.getElementById("themeone").innerHTML = "";
+    document.getElementById("container-quotes").innerHTML = "";
 }
 
 function remplirContainer() {
