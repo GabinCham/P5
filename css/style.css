@@ -20,10 +20,12 @@ h1, #generate {
 
 #themeone {
     color: darkcyan;
+    margin-bottom: 0.5em;
 }
 
 #themetwo {
     color: royalblue;
+    margin-bottom: 0.5em;
 }
 
 div.row {
