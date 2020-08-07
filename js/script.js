@@ -46,8 +46,6 @@ class Quotes {
  * Permet generer citation et insérer dans le container
  */
 function generateQuotes() {
-   // document.getElementById("themeone").innerHTML = "";
-    // document.getElementById("themetwo").innerHTML = "";
     var getTheme = document.getElementById("choice-theme").value;
     if (getTheme === 'Harry Potter') {
         const themeOneQuote = document.getElementById('themeone');
@@ -70,7 +68,7 @@ function getNumber() {
     if (realValue >= 1 && realValue <= 5) {
         return realValue;
     } else {
-        alert('faux');
+        alert('Veuillez selectionner une valeur entre 1 et 5.');
         return undefined;
     }
 }
